@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  authorization-app:
+    build: .
+    container_name: authorization-service
+    ports:
+      - "8080:8080"
+    environment:
+      - JAVA_OPTS=-Xmx256m -Xms128m
+    restart: unless-stopped
