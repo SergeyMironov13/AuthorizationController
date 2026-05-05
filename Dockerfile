@@ -1,8 +1,8 @@
 FROM eclipse-temurin:17-jdk
 
-EXPOSE 8080
+EXPOSE 8081
 
-COPY target/AuthorizationController-0.0.1-SNAPSHOT.jar app.jar
+ADD target/AuthorizationController-0.0.1-SNAPSHOT.jar myapp.jar
 
-CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java","-jar","/myapp.jar"]
 
